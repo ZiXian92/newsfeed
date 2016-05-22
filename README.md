@@ -33,3 +33,5 @@ For Windows users, if you can understand shell scripts, look into the script to 
 For for information, refer to Docker and Docker Compose documentation.
 
 Note: If you want to develop further for your own pleasure, note that there is no livereload server. Either add new Gulp tasks yourself or live with refreshing manually.
+
+Note 2: Currently, while Docker containers are running, it is not possible to install new modules throught NPM. You will need to manually edit package.json or do `npm install --save <module_name>` on the module in your host computer before restarting docker compose. If you have a better way, do raise it in an issue.
