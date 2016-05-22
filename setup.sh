@@ -9,4 +9,4 @@ if [ ! -d "$DB_DIR" ]; then
   mkdir "$DB_DIR"
 fi
 
-docker-compose up -d
+docker-compose up -d --build
