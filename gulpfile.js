@@ -4,8 +4,8 @@ const browserify = require('browserify');
 const nodemon = require('nodemon');
 const source = require('vinyl-source-stream');
 
-const vendorCss = ['../node_modules/bootstrap/dist/css/*.min.css', '../node_modules/bootstrap-material-design/dist/css/*.min.css'];
-const vendorJs = ['../node_modules/bootstrap/dist/js/*.min.js', '../node_modules/bootstrap-material-design/dist/js/*.min.js', '../node_modules/jquery/dist/*.min.js'];
+const vendorCss = ['./node_modules/bootstrap/dist/css/*.min.css', './node_modules/bootstrap-material-design/dist/css/*.min.css'];
+const vendorJs = ['./node_modules/bootstrap/dist/js/*.min.js', './node_modules/bootstrap-material-design/dist/js/*.min.js', './node_modules/jquery/dist/*.min.js'];
 
 gulp.task('default', ['copy-vendor-css', 'copy-vendor-js', 'compile-react', 'nodemon', 'watch']);
 

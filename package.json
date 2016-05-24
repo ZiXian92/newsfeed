@@ -1,13 +1,21 @@
 {
   "name": "newsfeed",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Simple newsfeed app to try out web sockets",
+  "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zixian92/newsfeed.git"
+  },
+  "author": "zixian92",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zixian92/newsfeed/issues"
+  },
+  "homepage": "https://github.com/zixian92/newsfeed#readme",
   "dependencies": {
     "body-parser": "^1.15.1",
     "bootstrap-material-design": "^0.5.9",

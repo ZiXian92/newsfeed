@@ -2,7 +2,7 @@ version: '2'
 services:
   web:
     build: .
-    command: bash -c "cd ..; npm install; cd src; gulp"
+    command: bash -c "npm install; gulp"
     container_name: newsfeed-web-server
     depends_on:
       - db
@@ -10,10 +10,9 @@ services:
       - db
     ports:
       - "8080:8080"
-    working_dir: /newsfeed/src
+    working_dir: /newsfeed
     volumes:
-      - .:/newsfeed/src
-      - ./package.json:/newsfeed/package.json
+      - .:/newsfeed
 
   db:
     image: postgres
