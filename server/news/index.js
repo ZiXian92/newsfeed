@@ -19,7 +19,7 @@ const emitNewsEvent = (function(){
 module.exports = router;
 
 router.get('/', function(req, res){
-  newsModel.getNews().then(function(news){
+  newsModel.getNewsList().then(function(news){
     res.send(news);
   }, function(err){
     res.status(500).send(err);

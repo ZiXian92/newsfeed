@@ -2,6 +2,7 @@ const express = require('express');
 const api = require('./api.js');
 const bodyParser = require('body-parser');
 const socketIo = require('./websocket.js');
+const redisManager = require('./redis.js');
 
 const app = express();
 const PORT = 8080;
@@ -33,4 +34,15 @@ io.of('/news').on('connect', function(){
   console.log('Someone connected on news channel.');
 }).on('disconnect', function(){
   console.log('Someone disconnected from news channel.');
+});
+
+// Start redis connection
+const redisClient = redisManager.initClient({
+  host: 'redis'
+});
+
+process.on('SIGINT', function(){
+  redisClient.quit();
+  server.close();
+  process.exit();
 });

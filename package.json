@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/zixian92/newsfeed#readme",
   "dependencies": {
+    "bluebird": "^3.4.0",
     "body-parser": "^1.15.1",
     "bootstrap-material-design": "^0.5.9",
     "express": "^4.13.4",
@@ -25,6 +26,7 @@
     "react": "^15.1.0",
     "react-dom": "^15.1.0",
     "react-router": "^2.4.1",
+    "redis": "^2.6.1",
     "socket.io": "^1.4.6",
     "socket.io-client": "^1.4.6"
   },

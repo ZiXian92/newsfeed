@@ -6,8 +6,10 @@ services:
     container_name: newsfeed-web-server
     depends_on:
       - db
+      - redis
     links:
       - db
+      - redis
     ports:
       - "8080:8080"
     working_dir: /newsfeed
@@ -27,3 +29,6 @@ services:
     volumes:
       - ./db/data:/var/lib/postgresql/data/pgdata
       - ./db/initdb.sql:/docker-entrypoint-initdb.d/initdb.sql
+
+  redis:
+    image: redis
